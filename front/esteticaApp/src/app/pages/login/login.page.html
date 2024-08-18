@@ -1,0 +1,71 @@
+<ion-content class="ion-padding" [fullscreen]="true">
+  
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        <img src="assets/icon/favicon.png" alt="Logo" class="logo">
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<section class="section-login">
+
+  <div class="content-login" id="format-form-login">
+    <h1 id="title-login">Bienvenido</h1>
+    <p class="login-desc">Inicia sesión para continuar</p>
+    <ion-list style="background: none">
+      <!--<form class="form-login" [formGroup]="formLogin" (ngSubmit)="validarDniForm()">-->
+      <form class="form-login" [formGroup]="formLogin" (ngSubmit)="iniciarSesion()">
+
+        <!--<div id="div-general-input" [ngClass]="formLogin.get('user')?.errors && formLogin.get('user')?.touched ? 'errorClass' : ''">-->
+        <div id="div-general-input">
+          <div class="line-input">
+            <div><ion-label class="label-inputs">Usuario</ion-label></div>
+            <div class="input-form-style">
+              <ion-input type="text" formControlName="us_cedula" maxlength="13" [required]="true" placeholder="Ingresa tu identificación"></ion-input>
+              <!--<ion-input type="text" formControlName="user" maxlength="13" [required]="true" placeholder="Ingresa tu identificación" (keyup)="onInputKeyUp($event)" (keypress)="validateInput($event)"></ion-input>-->
+            </div>
+          </div>
+
+        </div>
+
+        <!--<div id="div-general-input" [ngClass]="formLogin.get('passwd')?.errors && formLogin.get('passwd')?.touched ? 'errorClass' : ''">-->
+        <div id="div-general-input">
+          <div class="line-input">
+            <div><ion-label class="label-inputs">Contraseña</ion-label></div>
+            <div class="input-form-style">
+              <ion-input type="password" aria-label="Contraseña" placeholder="Ingresa tu contraseña" formControlName="us_clave" [required]="true"></ion-input>
+              <!--<ion-input [type]="showPassword ? 'text': 'password' " aria-label="Contraseña" placeholder="Ingresa tu contraseña" (keyup)="onInputKeyUpPass($event)" formControlName="passwd" [required]="true"></ion-input>-->
+              <ion-icon slot="end"></ion-icon>
+              <!--<ion-icon [name]="showPassword ? 'eye-off-outline': 'eye-outline'" slot="end" (click)="showPassword = !showPassword"></ion-icon>-->
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="links">
+
+          <div class="container-no-client">
+            <ion-label class="label-no-client">¿No tienes cuenta?</ion-label>
+            <a class="register-btn" fill="clear" [routerLink]="['/registrar']">
+            <!--<a class="register-btn" (click)="register()" fill="clear" [routerLink]="['register']">-->
+              Regístrate
+            </a>
+          </div>
+        </div>
+        <div class="container-init-sesion">
+          <!--<button type="submit" [disabled]="formLogin.invalid" class="btn-action init-setion-btn" id="open-loading">-->
+          <button type="submit" class="btn-action init-setion-btn" id="open-loading">
+            Iniciar Sesión
+          </button>
+          <!-- <ion-loading trigger="open-loading" *ngIf="showSpinner"></ion-loading> -->
+        </div>
+      </form>
+    </ion-list>
+  </div>
+
+</section>
+</ion-content>
+
+<!--<loading [show]="mostrarLoading"></loading>-->

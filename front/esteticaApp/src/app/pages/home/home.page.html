@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <div class="image-container">
+    <label for="" *ngIf="codigoRol === 1">Agendar</label>
+    <div class="image-wrapper" *ngIf="codigoRol === 1">
+      <img src="../../../assets/general/agendar.png" alt="Image 1" (click)="irAgendar()">
+    </div><br>
+    <label for="">Historial</label>
+    <div class="image-wrapper">
+      <img src="../../../assets/general/historial.png" alt="Image 2" (click)="irHistorial()">
+    </div><br>
+    <label for="" *ngIf="codigoRol === 1">Cancelar</label>
+    <div class="image-wrapper" *ngIf="codigoRol === 1">
+      <img src="../../../assets/general/cancelar.png" alt="Image 3" (click)="irCancelar()">
+    </div>
+    <!--<div>
+      <label for="">Gestion de Dias</label>
+    <div class="image-wrapper">
+      <img src="../../../assets/general/historial.png" alt="Image 4" >
+    </div><br>
+    </div>-->
+  </div>
+</ion-content>

@@ -1,0 +1,161 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>servicios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <table class="custom-table1">
+    <thead>
+      <tr>
+        <td><ion-button class="btn-general" (click)="hagoGeneral()">General</ion-button></td>
+        <td><ion-button class="btn-general" (click)="hagoEspecifico()">Especifico</ion-button></td>
+      </tr>
+    </thead>
+  </table>
+  <!---->
+  <ion-content *ngIf="esGeneral">
+    <br>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Fecha Inicio</th>
+          <td><input type="date" id="startDate" (change)="onDateChange($event)"></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Fecha Fin</th>
+          <td><input type="date" id="endDate" (change)="onDateChange($event)"></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <table class="custom-table1">
+      <thead>
+        <tr>
+          <td><ion-button style="background-color: aqua;" (click)="cargardatos()">Buscar</ion-button></td>
+          <td><ion-button style="background-color: green;" (click)="descargardatos()">Descargar</ion-button></td>
+        </tr>
+      </thead>
+    </table>
+    <br>
+    <ion-grid *ngIf="mostrarTabla">
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Historial</ion-card-title>
+            </ion-card-header>
+  
+            <ion-card-content>
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Servicio</th>
+                    <th>Empleado</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of datos">
+                    <td style="padding: 10px;">{{ item.ci_fecha }}</td>
+                    <td style="padding: 10px;">{{ item.ci_hora }}</td>
+                    <td style="padding: 10px;">{{ item.se_nombre }}</td>
+                    <td style="padding: 10px;">{{ item.empleado }}</td>
+                    <td style="padding: 10px;">{{ item.estado_des }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+
+  <ion-content *ngIf="esEspecifico">
+    <br>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Categoria</th>
+          <td>
+            <ion-select [(ngModel)]="codCate" (ionChange)="onCatalogChange($event)">
+              <ion-select-option *ngFor="let item of categorias" [value]="item.ca_codigo">
+                {{ item.ca_nombre }}
+              </ion-select-option>
+            </ion-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Servicio</th>
+          <td>
+            <ion-select [(ngModel)]="codServ" (ionChange)="onCatalogChange1($event)">
+              <ion-select-option *ngFor="let item of servicios" [value]="item.se_codigo">
+                {{ item.se_nombre }}
+              </ion-select-option>
+            </ion-select>
+          </td>
+        </tr>
+        <tr>
+          <th>Fecha Inicio</th>
+          <td><input type="date" id="startDate" (change)="onDateChange($event)"></td>
+        </tr>
+        <tr>
+          <th>Fecha Fin</th>
+          <td><input type="date" id="endDate" (change)="onDateChange($event)"></td>
+        </tr>
+      </thead>
+    </table>
+    <br>
+    <table class="custom-table1">
+      <thead>
+        <tr>
+          <td><ion-button style="background-color: aqua;" (click)="cargardatosEsp()">Buscar</ion-button></td>
+          <td><ion-button style="background-color: green;" (click)="descargardatosEsp()">Descargar</ion-button></td>
+        </tr>
+      </thead>
+    </table>
+    <br>
+    <ion-grid *ngIf="mostrarTabla">
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Historial</ion-card-title>
+            </ion-card-header>
+  
+            <ion-card-content>
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Servicio</th>
+                    <th>Empleado</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of datos">
+                    <td style="padding: 10px;">{{ item.ci_fecha }}</td>
+                    <td style="padding: 10px;">{{ item.ci_hora }}</td>
+                    <td style="padding: 10px;">{{ item.se_nombre }}</td>
+                    <td style="padding: 10px;">{{ item.empleado }}</td>
+                    <td style="padding: 10px;">{{ item.estado_des }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-content>

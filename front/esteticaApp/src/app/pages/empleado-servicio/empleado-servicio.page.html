@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Empleados Disponibles</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrar()">Atras</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-list>
+      <ion-item *ngFor="let item of empleados">
+        
+        <ion-label>
+          {{ item.em_nombre }}
+        </ion-label>
+        <ion-button fill="outline" slot="end" (click)="seleccionarFecha(item.em_codigo)">
+          Elegir
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+  <br>
+  <div *ngIf="EmpleadoSeleccionado">
+    <ion-label>Selecciona una fecha</ion-label>
+    <ion-item>
+    <ion-datetime
+      displayFormat="DD-MM-YYYY"
+      pickerFormat="DD-MM-YYYY"
+      [(ngModel)]="fechaSeleccionda"
+      (ionChange)="cambioFecha($event)"
+      [min]="minDate"
+    ></ion-datetime>
+    </ion-item>
+
+    <ion-button (click)="elegirFecha()">Enviar Fecha</ion-button>
+  </div>
+  <br>
+  <div *ngIf="seleccionarHora">
+    <ion-label>Selecciona un horario disponible</ion-label>
+    <ion-list>
+      <ion-item *ngFor="let item of horarios">
+        
+        <ion-label>
+          {{ item.hora }}
+        </ion-label>
+        <div *ngIf="item.estado == 1">
+          <ion-button fill="outline" slot="end" style="color: red;">
+            No Disponible
+          </ion-button>
+        </div>
+        <div *ngIf="item.estado == 0">
+          <ion-button fill="outline" slot="end" (click)="agendar(item.id)" style="color: green;">
+            Disponible
+          </ion-button>
+        </div>
+        <div *ngIf="item.estado == 2">
+          <ion-button fill="outline" slot="end" (click)="agendar(item.id)" >
+            Seleccionado
+          </ion-button>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+  <br>
+</ion-content>
+<ion-button *ngIf="listo" (click)="agendarCita()" style="margin: auto;">Agendar</ion-button>

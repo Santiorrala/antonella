@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gestión de Días</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Seleecione según desee deshabilitar</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col *ngFor="let day of ['Deshabilitar un día']">
+            <ion-item>
+              <!-- Checkbox para seleccionar el día -->
+              <ion-checkbox slot="start"></ion-checkbox>
+              <ion-label>{{ day }}</ion-label>
+              <!-- Mostrar selección de horas si el día está seleccionado -->
+              <ion-item>
+                <ion-label>    </ion-label>
+                
+              <td>
+                <input type="date" id="startDate" >
+                <ion-button fill="outline" slot="end" >
+                  +
+                </ion-button>
+              </td>
+
+              </ion-item>        
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <!-- Días de la semana -->
+        
+      </ion-grid>
+
+      <!-- Botón para guardar los cambios -->
+      <ion-button expand="full">
+        <!-- Comentario de función que no está implementada -->
+        <!-- (click)="guardarDiasTrabajo()" -->
+        Guardar Cambios
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Historial</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Tabla de Datos</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <table>
+              <thead>
+                <tr>
+                  <th>Horario</th>
+                  <th>Servicio</th>
+                  <th>Empleado</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of datos">
+                  <td style="padding: 10px;">{{ item.fecha_hora }}</td>
+                  <td style="padding: 10px;">{{ item.codigo_nombre }}</td>
+                  <td style="padding: 10px;">{{ item.empleado }}</td>
+                  <td style="padding: 10px;">
+                    <ion-button fill="outline" slot="end" (click)="cancelar(item.codigo_cita)">
+                    Cancelar
+                    </ion-button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

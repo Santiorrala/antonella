@@ -1,0 +1,34 @@
+/* home.page.scss */
+.custom-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+  }
+  
+  .custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .custom-table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  .custom-table1 {
+    width: 70%;
+    margin: auto;
+  }
+
+  .custom-table1 th, .custom-table1 td {
+    padding: 8px;
+    text-align: center;
+  }
+
+  .btn-general {
+    --background: #f3bacd;  /* Cambia el color de fondo */
+    --color: white;         /* Cambia el color del texto */
+    font-size: 18px;        /* Cambia el tamaño de la letra si lo deseas */
+  }
+  

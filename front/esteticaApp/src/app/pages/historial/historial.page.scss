@@ -1,0 +1,37 @@
+/* Estilo general para la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse; /* Asegura que las celdas adyacentes compartan bordes */
+    margin: 16px 0; /* Espacio alrededor de la tabla */
+  }
+  
+  /* Estilo para el encabezado de la tabla */
+  .table thead th {
+    background-color: #3880ff; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+    padding: 10px; /* Espaciado dentro de las celdas del encabezado */
+    text-align: left; /* Alineación del texto en el encabezado */
+  }
+  
+  /* Estilo para las celdas del cuerpo de la tabla */
+  .table tbody td {
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+    padding: 10px; /* Espaciado dentro de las celdas del encabezado */
+    text-align: center; /* Alineación del texto en las celdas */
+  }
+  
+  /* Estilo para las filas alternas del cuerpo de la tabla */
+  .table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo para filas alternas */
+  }
+  
+  /* Estilo para la fila actual cuando se pasa el mouse sobre ella */
+  .table tbody tr:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el mouse sobre la fila */
+  }
+  
+  /* Estilo para los encabezados de las columnas en dispositivos pequeños */
+  .table th, .table td {
+    text-align: center; /* Centra el texto en dispositivos pequeños si es necesario */
+    white-space: nowrap; /* Evita que el texto se ajuste en múltiples líneas */
+  }

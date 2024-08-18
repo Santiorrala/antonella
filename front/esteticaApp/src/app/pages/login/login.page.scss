@@ -1,0 +1,365 @@
+// cabecera logo
+.contenedor-logo {
+    padding: 20px 0 40px 0;
+  }
+  
+  ion-header {
+    ion-toolbar {
+      --background: transparent; /* Fondo transparente */
+      --border-width: 0px; /* Eliminar borde inferior */
+    }
+  
+    .logo {
+      display: block;
+      margin: 0 auto;
+      width: 200px; /* Ajusta el tamaño del logo */
+      height: auto;
+    }
+  }
+  
+  
+  ion-list {
+    padding: 1rem 0rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  // estilo general
+  form {
+    width: 100%;
+    max-width: 25rem;
+  }
+  
+  ion-item {
+    --background: none;
+    width: 90%;
+  
+  }
+  
+  //pendiente
+  #div-general-input {
+    width: 90%;
+  }
+  
+  .errorClass {
+    border-bottom: 1px solid #DA188A;
+  }
+  
+  #div-general-input:not(.errorClass) {
+    border-bottom: 1px solid #B1B5BD;
+  }
+  
+  ::ng-deep .input-highlight.sc-ion-input-md {
+  
+    background: none !important;
+  }
+  
+  .links ion-button {
+    text-transform: none;
+    //color: var(--ion-color-primary);
+  }
+  
+  .links a {
+    text-decoration: none;
+  }
+  
+  .recov-passwd-btn {
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    color: #83378F;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+  
+  .label-no-client {
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #b0b0b5;
+    margin-right: 10px;
+  }
+  
+  .register-btn {
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #f3bacd;
+    height: 20px;
+  }
+  
+  // seccion contenedor login
+  .section-login {
+    min-height: 464px;
+    height: 60vh;
+    //margin-top: 2rem;
+  }
+  
+  // formulario
+  .form-login {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .label-inputs {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #6A7180;
+  
+  }
+  .btn-action{
+    background-color: #f3bacd;
+    font-size: 20px;
+  }
+  
+  .form-login p:nth-child(3) //title formulario
+  
+  .content-login {
+    text-align: center;
+  }
+  #format-form-login {
+    border-radius: 16px;
+    margin: 15px 16px 0px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.80);
+    background: linear-gradient(36deg, rgba(255, 255, 255, 0.24) -2.79%, rgba(255, 255, 255, 0.03) 102.57%);
+  }
+  
+  
+  #title-login {
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 36px;
+    text-align: center;
+    color: #f3bacd !important;
+    margin-bottom: 5px;
+  }
+  
+  .login-desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #525A6C;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  
+  .input-form-style {
+    height: 32px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  // labels
+  .login-user label {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--ion-color-form-text);
+  }
+  
+  .login-passwd label {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--ion-color-form-text);
+  }
+  
+  .login-user {
+    margin: 1rem;
+    width: 100%;
+  }
+  
+  .login-passwd {
+    margin: 1rem;
+    width: 100%;
+  }
+  
+  //inputs
+  .login-user-items {
+    border: 1.5px solid #b0b0b5;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px 8px 0px;
+    gap: 16px;
+  }
+  
+  .form-login input {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+    font-size: 16px;
+    line-height: 140%;
+    color: #6a7180;
+    text-align: center;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    background: none;
+  }
+  
+  .login-passwd-items {
+    border: 1.5px solid #b1b5bd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px 8px 0px;
+    gap: 16px;
+  }
+  
+  //recuperar contraseña
+  .login-btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+  }
+  
+  .btn-recovery-passwd {
+    font-style: normal;
+    font-weight: 600;
+    width: 270px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #4a3cdb;
+    text-transform: none;
+  }
+  
+  //no tienes cuenta
+  .container-no-client {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  
+  }
+  
+  //no eres cliente
+  .cont-ecommerce{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 16px 55px 16px;
+    align-items: center;
+    .label-no-client{
+      margin: 0px;
+    }
+  }
+  .ecommerce-btn{
+  border-radius: 16px;
+  border: 1.5px solid #83378F;
+  background: #FFF;
+  display: inline-flex;
+  height: 48px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-top: 15px;
+  color: #83378F;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  max-width: 70%;
+  margin-bottom: 30px;
+  }
+  .btn-recovery-passwd:hover {
+    background: #fff;
+  }
+  
+  .login-btn-init {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container-init-sesion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .init-setion-btn {
+    width: 80%;
+    height: 3rem;
+    min-width: 80px;
+  }
+  
+  //alerta no usuario
+  .position-error-message {
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+  }
+  
+  .container-error-message {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    //border: 1px solid  #BD033B;
+    gap: 1rem;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0px 4px 4px 0px #222D444D;
+    height: auto;
+    background-color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding: 12px; //20
+  }
+  
+  .container-icon-close {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-message {
+    width: 100%;
+    padding: 0px;
+    text-align: justify;
+    color: #f3bacd;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  

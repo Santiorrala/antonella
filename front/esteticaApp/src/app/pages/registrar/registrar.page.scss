@@ -1,0 +1,34 @@
+/* home.page.scss */
+.custom-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+  }
+  
+  .custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .custom-table th {
+    background-color: #fcbacd;
+    color: #333;
+  }
+
+  .custom-table1 {
+    width: 70%;
+    margin: auto;
+  }
+
+  .custom-table1 th, .custom-table1 td {
+    padding: 8px;
+    text-align: center;
+  }
+  ion-button {
+    --background: #fcbacd; /* Cambia el color de fondo */
+    --color: black; /* Cambia el color del texto */
+    --border-radius: 12px; /* Redondea los bordes del botón */
+    --padding: 10px 20px; /* Ajusta el padding */
+  }
+  

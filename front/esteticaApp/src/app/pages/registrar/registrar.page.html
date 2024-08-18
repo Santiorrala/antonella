@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Nuevo Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <br>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Cedula</th>
+          <td><input type="text" id="cedula" maxlength="10" (change)="onChange($event)"></td>
+        </tr>
+        <tr>
+          <th>Nombre</th>
+          <td><input type="text" id="nombre" (change)="onChange($event)"></td>
+        </tr>
+        <tr>
+          <th>Apellido</th>
+          <td><input type="text" id="apellido" (change)="onChange($event)"></td>
+        </tr>
+        <tr>
+          <th>Correo</th>
+          <td><input type="text" id="correo" (change)="onChange($event)"></td>
+        </tr>
+        <tr>
+          <th>Telefono</th>
+          <td><input type="text" id="telefono" maxlength="10" (change)="onChange($event)"></td>
+        </tr>
+        <tr>
+          <th>Clave</th>
+          <td><input type="text" id="clave" (change)="onChange($event)"></td>
+        </tr>
+        <tr>
+          <th>Repetir Clave</th>
+          <td><input type="text" id="clave1" (change)="onChange($event)"></td>
+        </tr>
+      </thead>
+    </table>
+    <br>
+    <table class="custom-table1">
+      <thead>
+        <tr>
+          <td>
+            <ion-button  (click)="registrar()">Registrar</ion-button>
+          </td>
+        </tr>
+      </thead>
+    </table>
+    <br>
+  </ion-content>
+</ion-content>
